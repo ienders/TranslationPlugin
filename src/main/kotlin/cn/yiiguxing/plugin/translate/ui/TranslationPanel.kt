@@ -53,7 +53,7 @@ abstract class TranslationPanel<T : JComponent>(
     private val transliterationLabel = JLabel()
     private val dictViewer = StyledDictViewer()
     private val basicExplainViewer = Viewer()
-    private val otherExplainLabel = JLabel("网络释义:")
+    private val otherExplainLabel = JLabel("Definition:")
     private val otherExplainViewer = Viewer()
 
     private var dictViewerScrollWrapper: JScrollPane? = null
@@ -83,7 +83,7 @@ abstract class TranslationPanel<T : JComponent>(
         }
     }
 
-    private val fixLanguageLinkLabel = JLabel("源语言: ")
+    private val fixLanguageLinkLabel = JLabel("Source Language: ")
     private val fixLanguageLink = ActionLink {
         translation?.srclangs?.firstOrNull()?.let {
             onFixLanguageHandler?.invoke(it)

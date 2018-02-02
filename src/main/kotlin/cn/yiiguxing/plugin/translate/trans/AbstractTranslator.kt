@@ -21,12 +21,12 @@ abstract class AbstractTranslator : Translator {
     protected abstract fun parserResult(original: String, srcLang: Lang, targetLang: Lang, result: String): Translation
 
     protected open fun createErrorMessage(throwable: Throwable): String = when (throwable) {
-        is UnsupportedLanguageException -> "不支持的语言类型：${throwable.lang.langName}"
-        is SocketException -> "网络异常"
-        is ConnectException -> "网络连接失败"
-        is SocketTimeoutException -> "网络连接超时，请检查网络连接"
-        is JsonSyntaxException -> "无法解析翻译结果"
-        else -> "翻译失败：未知错误"
+        is UnsupportedLanguageException -> "Unsupported language: ${throwable.lang.langName}"
+        is SocketException -> "Network Error"
+        is ConnectException -> "Connect Error"
+        is SocketTimeoutException -> "Socket Timeout"
+        is JsonSyntaxException -> "Parse Error"
+        else -> "Translation failed: Unknown error"
     }
 
     override fun translate(text: String, srcLang: Lang, targetLang: Lang): Translation = try {

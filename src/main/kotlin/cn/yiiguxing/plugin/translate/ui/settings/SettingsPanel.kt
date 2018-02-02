@@ -36,9 +36,9 @@ class SettingsPanel(settings: Settings, appStorage: AppStorage)
     }
 
     private fun setTitles() {
-        selectionSettingsPanel.setTitledBorder("取词模式")
-        fontPanel.setTitledBorder("字体")
-        historyPanel.setTitledBorder("历史记录")
+        selectionSettingsPanel.setTitledBorder("Word Pattern")
+        fontPanel.setTitledBorder("Font")
+        historyPanel.setTitledBorder("History")
     }
 
     private fun setRenderer() {
@@ -46,9 +46,9 @@ class SettingsPanel(settings: Settings, appStorage: AppStorage)
             override fun customize(list: JList<*>, value: String, index: Int, selected: Boolean, hasFocus: Boolean) {
                 setText(value)
                 if (index == INDEX_INCLUSIVE) {
-                    setToolTipText("以最大范围取最近的所有词")
+                    setToolTipText("All Matching Words")
                 } else if (index == INDEX_EXCLUSIVE) {
-                    setToolTipText("取最近的单个词")
+                    setToolTipText("Take Nearest Word")
                 }
             }
         }

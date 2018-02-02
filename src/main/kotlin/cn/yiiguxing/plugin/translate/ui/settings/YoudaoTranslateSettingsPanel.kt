@@ -19,7 +19,7 @@ class YoudaoTranslateSettingsPanel(
 ) : YoudaoTranslateSettingsForm(), TranslatorSettingsPanel {
 
     override val id: String = YoudaoTranslator.id
-    override val name: String = "有道翻译"
+    override val name: String = "Youdau Translate"
     override val icon: Icon = YoudaoTranslator.icon
     override val component: JComponent = contentPanel
 

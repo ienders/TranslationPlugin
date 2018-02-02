@@ -82,7 +82,7 @@ class GoogleTTSPlayer(
                 LOGGER.w("TTS Error: Unsupported language: ${lang.code}.")
 
                 NotificationGroup(NOTIFICATION_ID, NotificationDisplayType.TOOL_WINDOW, true)
-                        .createNotification("TTS", "不支持的语言: ${lang.langName}.",
+                        .createNotification("TTS", "Unsupported language: ${lang.langName}.",
                                 NotificationType.WARNING, null)
                         .show(project)
             } else {

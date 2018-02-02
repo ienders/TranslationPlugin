@@ -19,7 +19,7 @@ class GoogleTranslateSettingsPanel(
 ) : GoogleTranslateSettingsForm(), TranslatorSettingsPanel {
 
     override val id: String = GoogleTranslator.id
-    override val name: String = "Google翻译"
+    override val name: String = "Google Translate"
     override val icon: Icon = GoogleTranslator.icon
     override val component: JComponent = contentPanel
 

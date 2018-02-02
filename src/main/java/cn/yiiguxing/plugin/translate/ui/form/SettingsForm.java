@@ -46,7 +46,6 @@ public class SettingsForm {
             mPrimaryFontComboBox = new FontComboBox(false, false);
             mPhoneticFontComboBox = new FontComboBox(false, true);
         } catch (NoSuchMethodError e) {
-            // Linux 下可能没有这构造函数
             try {
                 mPrimaryFontComboBox = new FontComboBox(false);
                 mPhoneticFontComboBox = new FontComboBox(false);
